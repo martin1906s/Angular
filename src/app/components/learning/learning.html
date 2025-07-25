@@ -1,29 +1,10 @@
 <div class="container my-5">
-    <div class="card shadow-lg border-0 rounded-4">
-        <div class="card-header bg-primary text-white rounded-top-4">
-            <h2 class="mb-0">Curso: {{course.name}}</h2>
-        </div>
-        <div class="card-body p-4">
-            <div class="table-responsive">
-                <table class="table table-hover align-middle">
-                    <thead class="table-primary">
-                        <tr>
-                            <th scope="col">Identificación</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellido</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @for (item of course.students; track $index) {
-                        <tr>
-                            <td>{{item.identification}}</td>
-                            <td>{{item.name}}</td>
-                            <td>{{item.surname}}</td>
-                        </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-        </div>
+  <div class="card shadow-lg border-0 rounded-4">
+    <div class="card-header bg-primary text-white rounded-top-4">
+      <h2 class="mb-0">Curso: {{course.name}}</h2>
     </div>
+    <div class="card-body p-4">
+      <student-view [students]="course.students"></student-view>
+    </div>
+  </div>
 </div>
