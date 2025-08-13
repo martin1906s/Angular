@@ -1,0 +1,27 @@
+<div class="container py-4">
+  <div class="card shadow-sm rounded-4">
+    <div class="card-header bg-primary border-bottom py-3">
+      <h2 class="fs-2 fw-bold text-dark mb-0 text-center bg-primary text-white">
+        FACTURA RETO 10
+      </h2>
+    </div>
+    <div class="card-body">
+      <div class="mb-3">
+        <ul class="list-unstyled mb-0">
+          <li class="fw-semibold">No. {{ invoice.id }}</li>
+        </ul>
+      </div>
+      <div class="row g-4">
+        <div class="col">
+          <company-view [company]="invoice.company"></company-view>
+        </div>
+        <div class="col">
+          <customer-view [customer]="invoice.customer"></customer-view>
+        </div>
+      </div>
+      <div class="mt-5">
+        <invoice-detail-view [items]="invoice.items"></invoice-detail-view>
+      </div>
+    </div>
+  </div>
+</div>

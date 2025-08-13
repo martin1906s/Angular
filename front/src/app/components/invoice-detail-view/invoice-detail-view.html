@@ -1,0 +1,14 @@
+<table class="table">
+  <thead class="table-primary">
+    <tr>
+      <th scope="col">Producto</th>
+      <th scope="col">Precio Unitario</th>
+      <th scope="col">Cantidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of items; track $index){
+    <tr invoice-item [item]="item"></tr>
+    }
+  </tbody>
+</table>

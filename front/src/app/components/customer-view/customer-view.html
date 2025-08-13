@@ -1,0 +1,12 @@
+<h3>Cliente</h3>
+<ul class="list-group">
+  <li class="list-group-item">Cedula: {{ customer.id }}</li>
+  <li class="list-group-item">Nombre: {{ customer.name }}</li>
+  <li class="list-group-item">Apellido: {{ customer.surname }}</li>
+  <li class="list-group-item">
+    Dirección: {{ customer.address.city }} -
+    {{ customer.address.principalStreet }} -
+    {{ customer.address.secondaryStreet }} -
+    {{ customer.address.code }}
+  </li>
+</ul>
